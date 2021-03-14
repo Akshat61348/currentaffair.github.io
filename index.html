@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #006fb9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #e6d3cf;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+h1 {
+  color: #ddd;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #2196F3;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+
+</style>
+<!--for side bar-->
+<style>
+  #mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 150px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    padding-top: 10px;
+  }
+  
+  #mySidenav a:hover {
+    left: 0;
+  }
+  
+  #practice {
+    top: 200px;
+    background-color: #337ab7;
+  }
+  
+  #mocktest {
+    top: 250px;
+    background-color: #337ab7;
+  }
+  
+  #megatest {
+    top: 300px;
+    background-color: #337ab7;
+  }
+  
+  #dailyquiz {
+    top: 350px;
+    background-color: #337ab7;
+  }
+  #currentaffair {
+    top: 400px;
+    background-color: #337ab7;
+  }
+  #getapp {
+    top: 450px;
+    background-color: #337ab7;
+  }
+  #register {
+    top: 500px;
+    background-color: #337ab7;
+  }
+  #login {
+    top: 550px;
+    background-color: #337ab7;
+  }
+  </style>
+  <!--box content-->
+  <style>
+  .middle{
+    position: absolute;
+    top: 130%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    
+  }
+  .btn{
+    position: relative;
+    display: block;
+    color: #343a40;
+    font-size: 14px;
+    font-family: "montserrat";
+    text-decoration: none;
+    margin: 30px 0;
+    border: 3px solid #808080;
+    padding: 14px 60px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+  }
+  .btn::before{
+    background: #337ab7;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+  
+  .btn1::before{
+    width: 0%;
+    height: 100%;
+  }
+  
+  .btn1:hover::before{
+    width: 100%;
+  }
+  @media screen and (max-width: 992px) {
+  .btn {
+    width: 65%;
+    float:none;
+    margin: 1% 15 1% 0%;
+    top:44px;
+    
+  }
+}
+@media screen and (max-width: 600px) {
+  #mySidenav a {
+  left: 0;
+  }
+  .btn {
+    width: 100%;
+    margin-top: auto;
+  }
+  .middle{
+    
+    margin-top: 270%;
+  }
+}
+  </style>
+</head>
+<body>
+<!--header-->
+<div style="padding-left: 160px;" class="topnav">
+  <img src="logo.png" alt="logo" />
+  <h1 style="text-align:center;">Current Affairs</h1>
+  <a class="active" href="#currentaffair">Current Affair</a>
+  <a href="#TH">Today's History</a>
+  <a href="#THN">The Hindu News</a>
+  <a href="#vocabulary">Vocabulary</a>
+  <a href="EN">Economic News</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+<!--sidebar-->
+<div id="mySidenav" class="sidenav">
+  <a href="#" id="practice">Practice</a>
+  <a href="#" id="mocktest">Mock Test</a>
+  <a href="#" id="megatest">MegaTest</a>
+  <a href="#" id="dailyquiz">DailyQuiz</a>
+  <a href="#" id="currentaffair">Current Affair</a>
+  <a href="#" id="getapp">Get App</a>
+  <a href="#" id="register">Register</a>
+  <a href="#" id="login">Login</a>
+
+</div>
+<!--box content-->
+
+  <div class="middle">
+    <a href="" class="btn btn1">NITI Ayog releases 'Mobilising Electric Vehicle Financing in India' Report</a>
+    <a href="" class="btn btn1">PM Narendra Modi inaugurated 'Maitri Setu' Virtually between India and Bangladesh over Feni River</a>
+    <a href="" class="btn btn1">Indian Navy Signs 11 ACTCM Barges to Thane Based MSME,'Surdipta projects'</a>
+    <a href="" class="btn btn1">France conducts"ASTER X" its !st Military Exercise in Space</a>
+    <a href="" class="btn btn1">Aquaconnect Partnered with BOB to provide Credit Access to Farmers under KCC scheme</a>
+    <a href="" class="btn btn1">DBS Bank India Joined  with TRRAIN to upskill differently-abled youth.</a>
+    <a href="" class="btn btn1">Magicbricks Partnered with Razorpay & HDFC Bank for property service "Pay Rent" Through Credit Card</a>
+    <a href="" class="btn btn1">Azadi ka Amrut Mahotsav: PM Modi flags off padyatra in Gujarat to commemorate 75th year of Independence</a>
+    <a href="" class="btn btn1">Union Cabinet approves creation of Pradhan Mantri Swasthya Suraksha Nidhi as single non-lapsable reserve fund </a>
+    <a href="" class="btn btn1">Himachal CM Inaugurates Swarnim International Shivratri Fair</a>
+    <a href="" class="btn btn1">Spice Jet will add 66 new flights , including additional services on certain routes, to its domestic network from 28 March2021</a>
+    <a href="" class="btn btn1">Uttarakhand chief minister Tirath Sing Rawat expanded his Council of Ministers on 12 March 2021</a>
+  </div>
+</body>
+</html>
